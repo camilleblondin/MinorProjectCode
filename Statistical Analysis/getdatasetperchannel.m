@@ -1,4 +1,4 @@
-function [BeforeEventMat,AfterEventMat ] = getdatasetperchannel(filename,window_duration,channelnumber)
+function [BeforeEventMat,AfterEventMat ] = getdatasetperchannel(filename,window_duration,WindowOfInterest,channelnumber)
 
 load(filename);
 psdLRL = outputdata.psd.LRL.signal;
@@ -19,8 +19,8 @@ for trial = 1:size(outputdata.psd.LRL.signal,3)
     psdLRL_channel_trial = outputdata.psd.LRL.signal(:,:,trial,1);
     
     window = 16 * window_duration;
-    window_of_interest = window;
-    nb_of_windows = floor(size(psdLRL_channel_trial,2)/window);
+    window_of_interest = floor(WindowOfInterest*16);
+    nb_of_windows = floor((size(psdLRL_channel_trial,2)-window)/window);
     classlabel = zeros(1,nb_of_windows);
     
     psdLRL_channel_trial_windows=[];

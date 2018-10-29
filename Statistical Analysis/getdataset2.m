@@ -25,8 +25,8 @@ for channel = 1:length(channels)
     for trial = 1:size(outputdata.psd.LRL.signal,3)
         psdLRL_channel_trial = outputdata.psd.LRL.signal(:,:,trial,1);
         
-        nb_of_windows = floor((size(psdLRL_channel_trial,2)-window)/window);
-        classlabel = zeros(1,nb_of_windows);
+        nb_of_windows_per_trial = floor((size(psdLRL_channel_trial,2)-window)/window);
+        classlabel = zeros(1, nb_of_windows_per_trial);
         
         psdLRL_channel_trial_windows=[];
         windownumber = 0;

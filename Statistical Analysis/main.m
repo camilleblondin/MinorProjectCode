@@ -4,8 +4,11 @@ clear all;
 close all;
 
 addpath('/Users/camilleblondin/Desktop/MinorProjectCode/EEGDataAnalysis/Raw Data analysis/results');
-[BeforeEventMat,AftereventMAT ] = getdataset2('s02s3r1_OutPutStruct.mat',0.0625,1);
-
+%%
+[BeforeEventMat,AftereventMAT ] = getdataset('s02s3r1_OutPutStruct.mat',0.25,1);
+%%
+[BeforeEventMatch,AfterEventMatch ] = getdatasetperchannel('s02s3r1_OutPutStruct.mat',0.0625,1,9);
+[BeforeEventMatchs3,AfterEventMatchs3 ] = getdatasetperchannel('s03s3r1_OutPutStruct.mat',0.0625,1,9);
 
 % %% ttest
 % addpath('/Users/camilleblondin/Desktop/MinorProject/CodeSpectrogramDisplayer/statistics');
