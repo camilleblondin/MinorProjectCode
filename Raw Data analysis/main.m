@@ -35,4 +35,6 @@ savefig(figLRL,[newname '_LRL']);
 %% Saving DATA
 save([newname '_OutPutStruct.mat'],'outputdata');
 
+save([newname '_rawData.mat'],'rawdata');
+
 %close all;
