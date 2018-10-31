@@ -8,6 +8,8 @@ pathname = [];
 commonpath = '/Users/camilleblondin/Desktop/MinorProjectCode/BCI_FTW/Data/';
 pathname.s01.s3.r1 = [commonpath 's01/session3/s01.20180523.140947.offline.mi.mi_cst.gdf'];
 pathname.s02.s3.r1 = [commonpath 's02/session3/s02.20180525.133904.offline.mi.mi_cst.gdf'];
+pathname.s02.s2.r1 = [commonpath 's02/session2/s02.20180420.093531.offline.mi.mi_cst.gdf'];
+
 pathname.s03.s3.r1 = [commonpath 's03/session3/s03.20180518.134257.offline.mi.mi_cst.gdf'];
 pathname.s03.s3.r2 = [commonpath 's03/session3/s03.20180518.140440.offline.mi.mi_cst.gdf'];
 pathname.s04.s3.r1 = [commonpath 's04/session3/s04.20180530.131907.offline.mi.mi_cst.gdf'];

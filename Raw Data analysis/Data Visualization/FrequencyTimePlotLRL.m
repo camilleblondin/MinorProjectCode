@@ -1,6 +1,5 @@
 
-% Script to plot the already normalized and separated data in a TIME
-% FREQUENCY plot per channel
+% Script to plot the already normalized and separated data 
 
 %outputdata.psd.LRL.signal(:,:,:,j) = normalized_signal;
 meanLRLsignal = outputdata.psd.LRL.mean;
@@ -34,8 +33,23 @@ for channel_n = 1:numberofchannels
     ylabel('Frequency');
     hold on;
     colorbar;
-    caxis([-20 20]);
+    caxis([-15 15]);
     hold off;
-   
+    
+%     figure(figLRL);
+%     set(figLRL,'Name','PSD average over all frequencies versus time','NumberTitle','off')
+%     subplot(sqrt(nb_of_channels),sqrt(nb_of_channels),channel_n);
+%     plot(rawdata.psd.time(1:dmin_left),mean(meanLRLsignal(:,:,channel_n),1));
+%     hold on;
+%     vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'left')), '--g', 'L')
+%     hold on;
+%     vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'right')) , '--r', 'R')
+%     hold on;
+%     vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'start')), '-.p', 's')
+%     hold on;
+%     title([channel_labels(channel_n)]);
+%     xlabel('Time [s]');
+%     ylabel('mean psd value');
+%    
     
 end

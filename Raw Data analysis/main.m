@@ -29,12 +29,15 @@ savefig(figtrial,[newname '_trial']);
 %%
 %FrequencyTimePlot_LRL; % Gives you the plot and the psd signal in LRL as an output
 LRLmatGeneration
+
+%%
 FrequencyTimePlotLRL
+
+%%
 savefig(figLRL,[newname '_LRL']);
 
 %% Saving DATA
 save([newname '_OutPutStruct.mat'],'outputdata');
-
 save([newname '_rawData.mat'],'rawdata');
 
 %close all;
