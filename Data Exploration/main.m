@@ -17,14 +17,13 @@ channel_nb = 16;
 fs = 512;
 
 figure()
-title('Raw signal');
 lag = 200;
 for channel = 1:channel_nb
     signal_channel = rawdata.signal(:,channel)+ lag * channel;
     plot(rawdata.time,signal_channel);
     hold on;
 end
-
+title('Raw signal');
 %% 2. Band pass filtering the signal
 d1 = designfilt('bandpassfir','FilterOrder',20, ...
     'CutoffFrequency1',8,'CutoffFrequency2',11, ...
@@ -33,7 +32,6 @@ d2 = designfilt('bandpassfir','FilterOrder',20, ...
     'CutoffFrequency1',26,'CutoffFrequency2',30, ...
     'SampleRate',fs);
 figure()
-title('Filtered signal');
 lag = 200;
 FilteredSignal = zeros(size(rawdata.signal(:,1:channel_nb)));
 for channel = 1:channel_nb
@@ -42,7 +40,7 @@ for channel = 1:channel_nb
     plot(rawdata.time,FilteredSignal(:,channel));
     hold on;
 end
-
+title('Filtered signal');
 %% Relative Power
 window = 0.5*512;
 noverlap = (0.5-1/16) * 512;
@@ -56,5 +54,5 @@ for i = 1:length(interval)-window
 end
 
 figure()
-title('Psd signal');
 plot(PXX);
+title('Psd signal');

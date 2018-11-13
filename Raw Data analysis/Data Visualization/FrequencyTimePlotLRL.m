@@ -22,11 +22,11 @@ for channel_n = 1:numberofchannels
     hold on;
     set(gca,'YDir','normal')
     hold on;
-    vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'left')), '--g', 'L')
+    vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'left')), '-g', 'L')
     hold on;
-    vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'right')) , '--r', 'R')
-    hold on;
-    vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'start')), '-.p', 's')
+    vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'right')) , '-r', 'R')
+    %hold on;
+    %vline(time_LRL(event_position_in_LRL(event_labels_in_LRL == 'start')),'-p', 's')
     hold on;
     title([channel_labels(channel_n)]);
     xlabel('Time [s]');

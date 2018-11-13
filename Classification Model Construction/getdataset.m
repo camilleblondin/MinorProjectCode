@@ -40,7 +40,7 @@ for channel = 1:length(channels)
     beforeeventMAT = [beforeeventMAT;beforeeventMATchannel];
     aftereventMAT = [aftereventMAT;aftereventMATchannel];
 end
-BeforeEventMat = [ classelabel_beforeeventMAT ;beforeeventMAT];
+BeforeEventMat = [classelabel_beforeeventMAT;beforeeventMAT];
 AfterEventMat = [classelabel_aftereventMAT;aftereventMAT];
 
 end

@@ -1,5 +1,5 @@
 % Plots with SpectrogramDisplayer
-addpath('/Users/camilleblondin/Desktop/MinorProject/CodeSpectrogramDisplayer');
+addpath('/Users/camilleblondin/Desktop/MinorProjectCode/CodeSpectrogramDisplayer');
 
 S = SpectrogramDisplayer();
 figure()
@@ -7,4 +7,4 @@ plotAllChannels(S, outputdata.psd.LRL.mean, outputdata.psd.LRL.properties, chann
 
 %%
 figure()
-plotAllChannelsWithEvents(S, outputdata.psd.LRL.mean, outputdata.psd.LRL.properties, channel_labels, outputdata.psd.LRL.event.position  , outputdata.psd.LRL.event.labels  , outputdata.psd.LRL.event.labels);
+plotAllChannelsWithEvents(S, outputdata.psd.LRL.mean, outputdata.psd.LRL.properties, channel_labels, outputdata.psd.LRL.event.position  , outputdata.psd.LRL.event.labels,['' '' '' '']  );

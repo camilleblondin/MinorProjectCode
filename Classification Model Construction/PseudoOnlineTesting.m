@@ -11,6 +11,7 @@ WindowDuration = 0.2;
 WindowOfInterest = 0.8;
 dataset = load('s02s3r1_OutPutStruct.mat');
 [EventMatLRL] = getdatasetLRL(dataset,WindowDuration,WindowOfInterest);
+
 [trainedClassifier, validationAccuracy] = trainClassifierKnn(EventMatLRL);
 
 %% 3 testing data 

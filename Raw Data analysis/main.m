@@ -6,7 +6,7 @@ close all;
 
 outputdata = []; % variable in which output information will be stored
 %%
-addpath('Data Loading','Data Preprocessing','Data Visualization');
+addpath('Data Loading','Data Preprocessing','Data Visualization','Feature Extraction');
 
 %% Load and Label data 
 pathnamedefinition;
