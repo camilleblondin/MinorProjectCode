@@ -1,9 +1,9 @@
-function [BeforeEventMat,AfterEventMat] = getdataset(dataset,WindowDuration,WindowOfInterest)
+function [BeforeEventMat,AfterEventMat] = getdataset_general(dataset,WindowDuration,WindowOfInterest)
 
 %load(filename);
-psdLRL = dataset.outputdata.psd.LRL.signal;
-events_info = dataset.outputdata.psd.LRL.event ;
-channels = dataset.outputdata.channel_label ;
+psdLRL = dataset.signal;
+events_info = dataset.event ;
+channels = dataset.channelLabel ;
 
 beforeeventMAT = [];
 aftereventMAT = [];

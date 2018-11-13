@@ -1,6 +1,6 @@
 % DataSessionVisualisation
 channels_nb = 16;
-frequencies_of_interest = [4:0.1:40];
+frequencies_of_interest = [4:1:40];
 mean_signal = mean(signal_Session,4);
 fig = figure;
 time = [1:1:size(signal_Session,2)];
@@ -25,7 +25,7 @@ for j = 1:channels_nb
     ylabel('Frequency');
     hold on;
     colorbar;
-    caxis([-2 2]);
+    caxis([-10 10]);
     hold off;
     
 end

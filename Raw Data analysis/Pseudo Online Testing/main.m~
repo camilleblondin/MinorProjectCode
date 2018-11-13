@@ -89,10 +89,9 @@ analysis_window_duration = 0.5 + 2/16; % in seconds
 analysis_window_length = analysis_window_duration*512; % in seconds
 freq_of_interest = [4:1:40];
 
-%for 1:analysis_window_length :size(pre_processed_signal,1)
+%
 windowdata = pre_processed_signal(1:analysis_window_length,:);
-
-[PSDdata] = getPSDforallchannels(windowdata,freq_of_interest); % should do it with pWelch instead
+[PSDdata] = getPSDforallchannels(windowdata,freq_of_interest);
 
 newdataset = [];
 

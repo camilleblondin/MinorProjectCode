@@ -4,7 +4,7 @@ clear all;
 close all;
 
 addpath('/Users/camilleblondin/Desktop/MinorProject/matlab/EEG Data Analysis');
-
+addpath('Data Loading by Session','Data Visualization by Session');
 %% Set parameters for DataLoading
 sessionname = 'Session3';
 subject = 'S03';
