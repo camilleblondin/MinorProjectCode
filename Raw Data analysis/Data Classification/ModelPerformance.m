@@ -123,6 +123,6 @@ set(gca, 'XTick',XTick);
 set(gca, 'XTickLabel', XTickLabel);
 
 %% 5. Do it for all the models we want to test!
-
+% See PerformanceforAllModels / partitionned with cvpartition or 'by hand'
 
 %% 6. same with Fisher score with the two best models maybe

@@ -18,7 +18,7 @@ for channel_n = 1:numberofchannels
     set(figLRL,'Name','Frequency vs Time, average over LRL segment','NumberTitle','off')
     subplot(sqrt(numberofchannels),sqrt(numberofchannels),channel_n)
     
-    imagesc(time_LRL,rot90(flipud(frequencies_of_interest),-1),meanLRLsignal(:,:,channel_n))
+    imagesc(time_LRL,frequencies_of_interest,meanLRLsignal(:,:,channel_n))
     hold on;
     set(gca,'YDir','normal')
     hold on;
