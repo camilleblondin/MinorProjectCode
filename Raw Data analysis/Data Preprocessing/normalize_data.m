@@ -22,7 +22,7 @@ for j = 1:nb_of_channels
         trial_i = channel_j(:,START_position(i):START_position(i+1));
         baseline_i = channel_j(:,baseline_position(i):baseline_end_position(i));
         
-        norm_i = 20*(log(trial_i) - mean(log(baseline_i),2));
+        norm_i = 20*(log(trial_i) - log(mean(baseline_i),2));
         normalized_signal(:,START_position(i):START_position(i+1)) = norm_i;
     end
     

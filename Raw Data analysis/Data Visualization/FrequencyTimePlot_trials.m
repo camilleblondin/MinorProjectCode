@@ -50,7 +50,7 @@ for j = 1:nb_of_channels
     figure(figtrial(1)) 
     set(figtrial(1),'Name','Frequency vs Time, average over trial','NumberTitle','off')
     subplot(sqrt(nb_of_channels),sqrt(nb_of_channels),j)
-    imagesc(rawdata.psd.time(1:dmin),rot90(flipud(rawdata.frequencies_of_interest),-1),mean_signal_overtrials)
+    imagesc(rawdata.psd.time(1:dmin),rawdata.frequencies_of_interest,mean_signal_overtrials)
     hold on;
     set(gca,'YDir','normal')
     vline(event_time(event_labels_trial == 'left')-start(1), '--g', 'L')
@@ -68,7 +68,7 @@ for j = 1:nb_of_channels
     ylabel('Frequency');
     hold on;
     colorbar;
-    caxis([-20 20]);
+    caxis([-15 15]);
     hold off;
     
     figure(figtrial(2))

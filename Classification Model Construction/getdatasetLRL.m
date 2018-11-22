@@ -16,7 +16,7 @@ for channel = 1:length(channels)
     % TRIAL NUMBER
     for event = 1:size(psdLRL,3)
         
-        psdLRL_channel_event = psdLRL(:,:,event,1);
+        psdLRL_channel_event = psdLRL(:,:,event,channel);
         
         [DatasetEvent] = getSignalLabellingLRL(psdLRL_channel_event,events_info ,WindowDuration,WindowOfInterest);
         classlabel = DatasetEvent.classlabels;

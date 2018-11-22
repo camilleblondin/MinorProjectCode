@@ -25,6 +25,7 @@ DataPSDextraction; % Power Spectral density is extracted in all the channels and
 EventsPlot; % shows the timing of the events for both original signal and psd signal
 %%
 FrequencyTimePlot_trials;
+%%
 savefig(figtrial,[newname '_trial']);
 %%
 %FrequencyTimePlot_LRL; % Gives you the plot and the psd signal in LRL as an output
